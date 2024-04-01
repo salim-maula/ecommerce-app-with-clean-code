@@ -16,6 +16,14 @@ class TTexts {
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarSubTitle = "Taimoon Sikander";
 
+  // -- Global
+  static const String tContinue = "continue";
+  static const String tSubmit = "Submit";
+  static const String and = "and";
+  static const String done = "Done";
+  static const String skip = "Skip";
+  static const String appName = "T-Store";
+
   // -- Authentication Form Text
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
@@ -31,12 +39,11 @@ class TTexts {
   static const String orSignInWith = "or sign in with";
   static const String orSignUpwith = "or sign up with";
   static const String iAgreeTo = "I agree to";
-  static const String and = "and";
+  
   static const String privacyPolicy = "Privacy Policy";
   static const String termsOfUse = "Terms of use";
   static const String verificationCode = "verificationCode";
-  static const String tContinue = "continue";
-  static const String tSubmit = "Submit";
+  
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
 
