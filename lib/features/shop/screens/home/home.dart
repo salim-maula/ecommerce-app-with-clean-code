@@ -1,17 +1,16 @@
-import 'package:cwt_ecommerce/common/widgets/appbar/appbar.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cwt_ecommerce/common/widgets/custom_shapes/containers/circular_containers.dart';
 import 'package:cwt_ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:cwt_ecommerce/common/widgets/images/t_rounded_image.dart';
+import 'package:cwt_ecommerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:cwt_ecommerce/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:cwt_ecommerce/utils/constants/colors.dart';
 import 'package:cwt_ecommerce/utils/constants/image_string.dart';
 import 'package:cwt_ecommerce/utils/constants/sizes.dart';
-import 'package:cwt_ecommerce/utils/device/device_utility.dart';
-import 'package:cwt_ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
-import '../../../../utils/constants/text_string.dart';
 import 'widgets/home_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,124 +23,57 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             TPrimaryHeaderContainer(
-                child: Column(
-              children: [
-                //? Appbar
-                const THomeAppBar(),
+              child: Column(
+                children: [
+                  //? Appbar
+                  THomeAppBar(),
 
-                const SizedBox(
-                  height: TSizes.spaceBtwSections,
-                ),
-
-                //? Searchbar
-                TSearchContainer(
-                  text: 'Search in store',
-                ),
-
-                const SizedBox(
-                  height: TSizes.spaceBtwSections,
-                ),
-
-                //?Categories
-                Padding(
-                  padding: EdgeInsets.only(left: TSizes.defaultSpace),
-                  child: Column(
-                    children: [
-                      TSectionHeading(
-                        title: 'Popular Categories',
-                        showActionButton: false,
-                        textColor: Colors.white,
-                      ),
-                      const SizedBox(
-                        height: TSizes.spaceBtwItems,
-                      ),
-
-                      //? categories
-                      SizedBox(
-                        height: 100,
-                        child: ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: 6,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (_, index) {
-                            return TVerticalImageText(
-                              image: TImages.shoeIcon,
-                              title: "Shoe",
-                              onTap: () {},
-                            );
-                          },
-                        ),
-                      )
-                    ],
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
                   ),
-                )
-              ],
-            )),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
-class TVerticalImageText extends StatelessWidget {
-  const TVerticalImageText({
-    super.key,
-    required this.image,
-    required this.title,
-    this.textColor = TColors.white,
-    this.backgroundColor = TColors.white,
-    this.onTap,
-  });
+                  //? Searchbar
+                  TSearchContainer(
+                    text: 'Search in store',
+                  ),
 
-  final String image, title;
-  final Color textColor;
-  final Color? backgroundColor;
-  final void Function()? onTap;
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.only(right: TSizes.spaceBtwItems),
-        child: Column(
-          children: [
-            //? Circular Icon
-            Container(
-              width: 56,
-              height: 56,
-              padding: EdgeInsets.all(TSizes.sm),
-              decoration: BoxDecoration(
-                  color: backgroundColor ??
-                      (THelperFunctions.isDarkMode(context)
-                          ? TColors.black
-                          : TColors.white),
-                  borderRadius: BorderRadius.circular(100)),
-              child: Center(
-                child: Image(
-                  image: AssetImage(image),
-                  fit: BoxFit.cover,
-                  color: TColors.dark,
-                ),
+                  //?Categories
+                  Padding(
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        TSectionHeading(
+                          title: 'Popular Categories',
+                          showActionButton: false,
+                          textColor: Colors.white,
+                        ),
+                        SizedBox(
+                          height: TSizes.spaceBtwItems,
+                        ),
+
+                        //? categories
+                        THomeCategory()
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
-            //? Text
-            const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
-            ),
-            SizedBox(
-              width: 55,
-              child: Text(
-                title,
-                style: Theme.of(context)
-                    .textTheme
-                    .labelMedium!
-                    .apply(color: textColor),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            )
+
+            // Body -- Tutorial
+            Padding(
+                padding: EdgeInsets.all(TSizes.defaultSpace),
+                child: TPromoSlider(
+                  banners: [
+                    TImages.promoBanner1,
+                    TImages.promoBanner1,
+                    TImages.promoBanner1,
+                  ],
+                ))
           ],
         ),
       ),
