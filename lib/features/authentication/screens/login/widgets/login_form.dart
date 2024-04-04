@@ -52,7 +52,8 @@ class TLoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () => Get.to(() => const ForgetPassword()),
+                    // onPressed: () => Get.to(() => const ForgetPassword()),
+                    onPressed: () => Get.to(() =>  "ForgetPassword()" as Widget),
                     child: const Text(TTexts.forgetPassword))
               ],
             ),
