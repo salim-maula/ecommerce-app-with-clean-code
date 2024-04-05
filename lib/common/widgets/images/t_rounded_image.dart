@@ -5,16 +5,17 @@ import 'package:flutter/material.dart';
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
     super.key,
-    this.width ,
-    this.height ,
+    this.width,
+    this.height,
     required this.imageurl,
-     this.applyImageRadius = true,
+    this.applyImageRadius = true,
     this.border,
-     this.backgroundColor = TColors.light,
+    this.backgroundColor = TColors.light,
     this.fit = BoxFit.contain,
     this.padding,
-     this.isNetworkImage = false,
-    this.onPressed,  this.borderRadius = TSizes.md,
+    this.isNetworkImage = false,
+    this.onPressed,
+    this.borderRadius = TSizes.md,
   });
 
   final double? width, height;
@@ -27,7 +28,6 @@ class TRoundedImage extends StatelessWidget {
   final bool isNetworkImage;
   final double borderRadius;
   final VoidCallback? onPressed;
-
 
   @override
   Widget build(BuildContext context) {

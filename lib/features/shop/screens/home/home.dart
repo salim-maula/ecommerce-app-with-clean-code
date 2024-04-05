@@ -1,15 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cwt_ecommerce/common/widgets/custom_shapes/containers/circular_containers.dart';
 import 'package:cwt_ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:cwt_ecommerce/common/widgets/images/t_rounded_image.dart';
 import 'package:cwt_ecommerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:cwt_ecommerce/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:cwt_ecommerce/utils/constants/colors.dart';
 import 'package:cwt_ecommerce/utils/constants/image_string.dart';
 import 'package:cwt_ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import 'widgets/home_appbar.dart';
 
@@ -64,16 +62,29 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            // Body -- Tutorial
             Padding(
-                padding: EdgeInsets.all(TSizes.defaultSpace),
-                child: TPromoSlider(
-                  banners: [
-                    TImages.promoBanner1,
-                    TImages.promoBanner1,
-                    TImages.promoBanner1,
-                  ],
-                ))
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner1,
+                      TImages.promoBanner1,
+                    ],
+                  ),
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+                  TGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const TProductCardVertical(),
+                  )
+                ],
+              ),
+            ),
+
+            // Body -- Tutorial
           ],
         ),
       ),

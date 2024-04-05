@@ -37,5 +37,25 @@ class TImages {
   //Banners
   static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
 
+  //Products
+  static const String shoe1 = "assets/images/products/shoe1.png";
+  static const String shoe2 = "assets/images/products/shoe2.png";
+  static const String shoe3 = "assets/images/products/shoe3.png";
+  static const String shoe4 = "assets/images/products/shoe4.png";
+  static const String shoe5 = "assets/images/products/shoe5.png";
+  static const String shoe6 = "assets/images/products/shoe6.png";
+  static const String shoe7 = "assets/images/products/shoe7.png";
+  static const String shoe8 = "assets/images/products/shoe8.png";
+  static const String shoe9 = "assets/images/products/shoe9.png";
+  static const String shoe10 = "assets/images/products/shoe10.png";
+
+  //Products Colors
+  static const String color1 = "assets/images/products/color1.png";
+  static const String color2 = "assets/images/products/color2.png";
+  static const String color3 = "assets/images/products/color3.png";
+  static const String color4 = "assets/images/products/color4.png";
+
+
+
 
 }
