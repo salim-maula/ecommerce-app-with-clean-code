@@ -10,25 +10,31 @@ environment:
 
 #?-----------------------PACKAGES-----------------------#
 dependencies:
+  cached_network_image: ^3.3.1
+  carousel_slider: ^4.2.1
+  cloud_firestore: ^4.15.8
+  connectivity_plus: ^5.0.1
+  cupertino_icons: ^1.0.2
+  firebase_auth: ^4.17.8
+  firebase_core: null
+  firebase_storage: ^11.6.9
   flutter:
     sdk: flutter
-
-  #? State Management
+  flutter_native_splash: ^2.3.10
+  flutter_rating_bar: ^4.0.1
   get: ^4.6.6
   get_storage: ^2.1.1
-
-  #? Utility Package
+  google_sign_in: ^6.2.1
   httpp: ^0.0.7
+  iconsax: ^0.0.8
+  image_picker: ^1.0.8
   intl: ^0.19.0
   logger: ^2.2.0
-  url_launcher: ^6.2.5
-  carousel_slider: ^4.2.1
-  flutter_native_splash: ^2.3.11
+  lottie: ^3.0.0
+  readmore: ^3.0.0
+  shimmer: ^3.0.0
   smooth_page_indicator: ^1.1.0
-
-  #? Icons
-  iconsax: ^0.0.8
-  cupertino_icons: ^1.0.2
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -39,14 +45,16 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/icons/
     - assets/logos/
-    - assets/images/
+    - assets/icons/brands/
+    - assets/images/content/
     - assets/images/banners/
+    - assets/images/reviews/
     - assets/images/products/
-    - assets/images/on_boarding_images/
-    - assets/images/animations/
     - assets/icons/categories/
+    - assets/images/animations/
+    - assets/icons/payment_methods/
+    - assets/images/on_boarding_images/
 
   fonts:
     - family: Poppins

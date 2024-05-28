@@ -1,8 +1,7 @@
-import 'package:cwt_ecommerce/features/authentication/controller_onboarding/onboarding_controller.dart';
+import 'package:cwt_ecommerce/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/helpers/helper_functions.dart';

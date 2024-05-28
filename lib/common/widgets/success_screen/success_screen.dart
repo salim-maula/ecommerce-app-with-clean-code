@@ -1,12 +1,9 @@
 import 'package:cwt_ecommerce/common/styles/spacing_styles.dart';
-import 'package:cwt_ecommerce/features/authentication/screens/login/login.dart';
 import 'package:cwt_ecommerce/utils/constants/sizes.dart';
 import 'package:cwt_ecommerce/utils/constants/text_string.dart';
 import 'package:cwt_ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import '../../../utils/constants/image_string.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
@@ -47,7 +44,7 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => onPressed,
+                  onPressed: onPressed,
                   child: const Text(TTexts.tContinue),
                 ),
               ),

@@ -1,4 +1,4 @@
-import 'package:cwt_ecommerce/features/authentication/controller_onboarding/onboarding_controller.dart';
+import 'package:cwt_ecommerce/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

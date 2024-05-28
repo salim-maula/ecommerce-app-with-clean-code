@@ -1,7 +1,9 @@
+import 'package:cwt_ecommerce/features/personalization/screens/settings/settings.dart';
 import 'package:cwt_ecommerce/features/shop/screens/home/home.dart';
+import 'package:cwt_ecommerce/features/shop/screens/store/store.dart';
+import 'package:cwt_ecommerce/features/shop/screens/wishlist/wihslist.dart';
 import 'package:cwt_ecommerce/utils/constants/colors.dart';
 import 'package:cwt_ecommerce/utils/helpers/helper_functions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -46,11 +48,9 @@ class NavigationMenu extends StatelessWidget {
           ],
         );
       }),
-      body: Obx(
-         () {
-          return controller.screens[controller.selectedIndex.value];
-        }
-      ),
+      body: Obx(() {
+        return controller.screens[controller.selectedIndex.value];
+      }),
     );
   }
 }
@@ -59,15 +59,9 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    const HomeScreen(),
-    Container(
-      color: Colors.purple,
-    ),
-    Container(
-      color: Colors.orange,
-    ),
-    Container(
-      color: Colors.blue,
-    ),
+     HomeScreen(),
+   const StoreScreen(),
+    const FavouriteScreen(),
+    const SettingsScreen()
   ];
 }
